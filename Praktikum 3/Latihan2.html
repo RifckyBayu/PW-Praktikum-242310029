@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Travel IBIK Abadi</title>
+
+    <script>
+        function hitung() {
+
+            var nama = document.fform.nama.value;
+            var tujuan = document.fform.tujuan.value;
+            var kelas = document.fform.kelas.value;
+            var tiket = parseInt(document.fform.tiket.value);
+
+            // status member
+            var status = "";
+            if (document.fform.member[0].checked) {
+                status = "Member";
+            } else if (document.fform.member[1].checked) {
+                status = "Non Member";
+            }
+
+            var harga = 0;
+
+            // harga sesuai tabel
+            if (tujuan == "jakarta") {
+                if (kelas == "eksekutif") harga = 70000;
+                else if (kelas == "bisnis") harga = 40000;
+                else harga = 10000;
+            }
+
+            if (tujuan == "solo") {
+                if (kelas == "eksekutif") harga = 80000;
+                else if (kelas == "bisnis") harga = 50000;
+                else harga = 20000;
+            }
+
+            if (tujuan == "surabaya") {
+                if (kelas == "eksekutif") harga = 90000;
+                else if (kelas == "bisnis") harga = 60000;
+                else harga = 30000;
+            }
+
+            var subtotal = harga * tiket;
+
+            var diskon = 0;
+            if (status == "Member") {
+                diskon = 0.1 * subtotal;
+            }
+
+            var total = subtotal - diskon;
+
+            // OUTPUT ALERT
+            alert(
+                "Nama Pemesan: " + nama + "\n" +
+                "Tujuan: " + tujuan + "\n" +
+                "Kelas: " + kelas + "\n" +
+                "Harga Tiket: " + harga + "\n" +
+                "Subtotal: " + subtotal + "\n" +
+                "Diskon: " + diskon + "\n" +
+                "Total Bayar: " + total
+            );
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Pemesanan Travel IBIK Abadi</h2>
+
+<form name="fform">
+
+Nama Pemesan : <br>
+<input type="text" name="nama"><br><br>
+
+Tujuan : <br>
+<select name="tujuan">
+    <option value="jakarta">Jakarta</option>
+    <option value="solo">Solo</option>
+    <option value="surabaya">Surabaya</option>
+</select><br><br>
+
+Kelas : <br>
+<select name="kelas">
+    <option value="eksekutif">Eksekutif</option>
+    <option value="bisnis">Bisnis</option>
+    <option value="ekonomi">Ekonomi</option>
+</select><br><br>
+
+Banyak Tiket : <br>
+<input type="number" name="tiket"><br><br>
+
+Status : <br>
+<input type="radio" name="member"> Member
+<input type="radio" name="member"> Non Member<br><br>
+
+<input type="button" value="Hitung" onclick="hitung()">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
