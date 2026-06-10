@@ -1,0 +1,51 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #ffffff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #2a5072, #08aab3);
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.profile {
+    width: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin-bottom: 10px;
+}
+
+/* CARD */
+.card {
+    background: rgb(225, 225, 225);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* TABLE */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #2a5072;
+    color: white;
+}
+
+td, th {
+    padding: 8px;
+    border: 1px solid #000000;
+}
+
+/* LIST */
+ul {
+    padding-left: 20px;
+}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Latihan 3</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background: #f5f5f5;
+        }
+
+        /* HEADER */
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* SECTION */
+        section {
+            background: #cfd8dc;
+            text-align: center;
+            padding: 40px;
+            font-style: italic;
+        }
+
+        /* CONTAINER */
+        .container {
+            display: flex;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* CARD */
+        .card {
+            width: 50%;
+            border: 1px solid #0077b6;
+            background: white;
+        }
+
+        .card img {
+            width: 100%;
+        }
+
+        .card p {
+            padding: 10px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: inline-block;
+            margin: 10px;
+            padding: 5px 10px;
+            border: 1px solid #0077b6;
+            text-decoration: none;
+            color: #0077b6;
+        }
+
+        .btn:hover {
+            background: #0077b6;
+            color: white;
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<header>
+    <h2>Lab Pemrograman Web</h2>
+    <nav>
+    <a href="#">Home</a>
+    <a href="Latihan4.html">Profile</a>
+    <a href="#">Contact Us</a>
+</nav>
+</header>
+
+<!-- SECTION -->
+<section>
+    <h2>"The purpose of our lives is to be happy."</h2>
+    <p>- Dalai Lama -</p>
+</section>
+
+<!-- ARTICLE -->
+<div class="container">
+
+    <article class="card">
+        <img src="atom.png">
+        <p>
+            An atom is the smallest unit of ordinary matter that
+forms a chemical element. Every solid, liquid, gas,
+and plasma is composed of neutral or ionized
+atoms.
+        </p>
+        <a href="Latihan1.html" class="btn">View</a>
+        <p style="text-align:right;">9 mins</p>
+    </article>
+
+    <article class="card">
+        <img src="hewan.png">
+        <p>
+            World Wildlife Fund is committed to
+endangered species protection. See how we are
+ensuring that the world our children inherit will
+be home to the same.
+
+        </p>
+        <a href="Latihan2.html" class="btn">View</a>
+        <p style="text-align:right;">9 mins</p>
+    </article>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+    Copyright © Rifcky Bayu Bachtriar 2026
+</footer>
+
+</body>
+</html>

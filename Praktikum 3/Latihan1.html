@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Data Mahasiswa</title>
+
+    <script>
+        function kirim() {
+
+            var nim = document.fform.nim.value;
+            var nama = document.fform.nama.value;
+
+            // jenis kelamin
+            var jk = "";
+            if (document.fform.jk[0].checked) {
+                jk = "Pria";
+            } else if (document.fform.jk[1].checked) {
+                jk = "Wanita";
+            }
+
+            var agama = document.fform.agama.value;
+            var status = document.fform.status.value;
+            var jurusan = document.fform.jurusan.value;
+            var komentar = document.fform.komentar.value;
+
+            // OUTPUT ALERT
+            alert(
+                "NIM: " + nim + "\n" +
+                "Nama: " + nama + "\n" +
+                "Jenis Kelamin: " + jk + "\n" +
+                "Agama: " + agama + "\n" +
+                "Status: " + status + "\n" +
+                "Jurusan: " + jurusan + "\n" +
+                "Komentar: " + komentar
+            );
+        }
+    </script>
+</head>
+
+<body>
+
+<h2>Form Data Mahasiswa</h2>
+
+<form name="fform">
+
+NIM : <br>
+<input type="text" name="nim"><br><br>
+
+Nama : <br>
+<input type="text" name="nama"><br><br>
+
+Jenis Kelamin : <br>
+<input type="radio" name="jk"> Pria
+<input type="radio" name="jk"> Wanita<br><br>
+
+Agama : <br>
+<select name="agama">
+    <option>Islam</option>
+    <option>Kristen</option>
+    <option>Hindu</option>
+    <option>Buddha</option>
+</select><br><br>
+
+Status Perkawinan : <br>
+<select name="status">
+    <option>Belum Kawin</option>
+    <option>Kawin</option>
+</select><br><br>
+
+Status Pekerjaan : <br>
+<select name="status">
+    <option>Mahasiswa</option>
+    <option>Bekerja</option>
+</select><br><br>
+
+Jurusan : <br>
+<select name="jurusan">
+    <option>Teknologi Informasi</option>
+    <option>Sistem Informasi</option>
+    <option>Akuntasi</option>
+    <option>Manajemen</option>
+    <option>Biokewirausahaan</option>
+    <option>Pariwisata</option>
+    <option>Vokasi Digital</option>
+</select><br><br>
+
+Komentar : <br>
+<textarea name="komentar"></textarea><br><br>
+
+<input type="button" value="KIRIM" onclick="kirim()">
+<input type="reset" value="RESET">
+
+</form>
+
+</body>
+</html>

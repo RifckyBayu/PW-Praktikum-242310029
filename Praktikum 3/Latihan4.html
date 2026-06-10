@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Saldo Tabungan</title>
+
+    <script>
+        function hitung() {
+
+    var saldo = parseInt(document.fform.saldo.value);
+    var bunga = parseInt(document.fform.bunga.value);
+    var waktu = parseInt(document.fform.waktu.value);
+
+    var hasil = "";
+
+    for (var i = 1; i <= waktu; i++) {
+        saldo = saldo + (saldo * bunga / 100);
+        hasil += "Saldo Bulan " + i + " = Rp. " + saldo + "\n";
+    }
+
+    alert(hasil);
+}
+    </script>
+</head>
+
+<body>
+
+<h2>Perhitungan Saldo Tabungan</h2>
+
+<form name="fform">
+
+Saldo Awal : <br>
+<input type="number" name="saldo"><br><br>
+
+Bunga (%) : <br>
+<input type="number" name="bunga"><br><br>
+
+Waktu (bulan) : <br>
+<input type="number" name="waktu"><br><br>
+
+<input type="button" value="Hitung" onclick="hitung()">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
