@@ -1,0 +1,99 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.app{
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background:#f2f4f8;
+  transition:.3s;
+}
+
+.dark{
+  background:#1d1d1d;
+  color:white;
+}
+
+.container{
+  width:600px;
+  padding:30px;
+  border-radius:15px;
+  background:white;
+  box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+.dark .container{
+  background:#2c2c2c;
+}
+
+h1{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.mode{
+  text-align:center;
+  margin-bottom:20px;
+  font-weight:bold;
+}
+
+.toggle-btn{
+  width:100%;
+  padding:12px;
+  margin-bottom:15px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#2563eb;
+  color:white;
+  font-size:16px;
+}
+
+.student-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px;
+  border:1px solid #ddd;
+  border-radius:10px;
+  margin-bottom:12px;
+}
+
+.dark .student-card{
+  border:1px solid #555;
+}
+
+.student-card button{
+  padding:10px 18px;
+  border:none;
+  border-radius:8px;
+  cursor:pointer;
+  background:#16a34a;
+  color:white;
+  font-weight:bold;
+}
+
+.student-card button:disabled{
+  background:gray;
+  cursor:not-allowed;
+}
+
+.hadir{
+  color:limegreen;
+  font-weight:bold;
+}
+
+.belum{
+  color:red;
+  font-weight:bold;
+}
+
+h2{
+  margin-top:25px;
+  text-align:center;
+}
