@@ -1,12 +1,8 @@
-// import Image from "next/image";
-import Latihan1_state from "../src/latihan1_state";
-import Latihan2_state_props from "../src/latihan2_state_props";
-
-export default function Home() {
+export default function CMS() {
   return (
     <div>
-      <Latihan1_state/>
-      <Latihan2_state_props/>
+      <h1>CMS Dashboard</h1>
+      <p>Halaman CMS berhasil dibuat.</p>
     </div>
-  )
+  );
 }
