@@ -2,6 +2,11 @@ require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const db = require("./models");
+const path = require("path");
+
+const userRoutes = require("./routes/userRoutes");
+const bookRoutes = require("./routes/book");
+
 const app = express();
 
 // Middleware
@@ -14,6 +19,17 @@ app.use(
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/api/books", bookRoutes);
+app.use("/api/users", userRoutes);
+
+app.use(
+  "/uploads",
+  express.static(path.join(__dirname, "uploads"))
+);
+
+app.use("/api/books", bookRoutes);
+
+
 // Test database connection
 db.sequelize
   .authenticate()
@@ -21,7 +37,8 @@ db.sequelize
     console.log("✓ Koneksi ke database MySQL berhasil!");
   })
   .catch((err) => {
-    console.error("✗ Koneksi ke database gagal:", err.message);
+    console.error("✗ Koneksi ke database gagal:");
+    console.error(err);
     process.exit(1);
   });
 
@@ -63,7 +80,7 @@ app.use((err, req, res, next) => {
 });
 
 // Start Server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.API_PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✓ Server running on port ${PORT}`);
   console.log(`✓ API available at http://localhost:${PORT}`);
